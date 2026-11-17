@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071d49">
+  <meta name="description" content="Dr. B. R. Ambedkar Junior High School, Lal Sarai, Nagina, Bijnor, Uttar Pradesh — Nursery to Class 8, English and Hindi medium.">
+  <title>Dr. B. R. Ambedkar Junior High School | Lal Sarai, Nagina</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/school-logo.png">
+
+  <style>
+    :root{
+      --navy:#071d49;
+      --blue:#0d47a1;
+      --blue2:#1667d9;
+      --gold:#d7a62a;
+      --gold2:#f4cf66;
+      --cream:#f7f9fc;
+      --ink:#14213d;
+      --muted:#65728a;
+      --white:#fff;
+      --line:#e7ebf2;
+      --shadow:0 18px 55px rgba(8,29,73,.11);
+      --radius:22px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"DM Sans",sans-serif;color:var(--ink);background:#fff;line-height:1.7}
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(92%,var(--max));margin:auto}
+    .topbar{background:var(--navy);color:#fff;font-size:.88rem}
+    .topbar .container{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:9px 0}
+    .topbar span{display:inline-flex;align-items:center;gap:8px}
+    .topbar a{opacity:.92}.topbar a:hover{opacity:1;color:var(--gold2)}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(7,29,73,.08)}
+    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:13px;min-width:0}
+    .brand-mark{width:58px;height:58px;border-radius:50%;display:block;object-fit:contain;background:#fff;border:2px solid var(--gold2);box-shadow:0 8px 22px rgba(7,29,73,.18);flex:none}
+    .brand-text{min-width:0}.brand-text strong{display:block;color:var(--navy);font-family:"Playfair Display";font-size:1.04rem;line-height:1.15}.brand-text small{color:var(--muted);font-size:.72rem}
+    .navlinks{display:flex;align-items:center;gap:23px;font-weight:600;font-size:.9rem}
+    .navlinks a{position:relative;color:#293752}
+    .navlinks a:after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:2px;background:var(--gold);transition:.25s}
+    .navlinks a:hover{color:var(--blue)}.navlinks a:hover:after{width:100%}
+    .nav-cta{background:var(--navy);color:#fff!important;padding:11px 16px;border-radius:999px}.nav-cta:after{display:none}
+    .menu-btn{display:none;border:0;background:var(--navy);color:#fff;width:44px;height:44px;border-radius:12px;font-size:1.15rem}
+
+    .hero{position:relative;min-height:720px;display:grid;place-items:center;overflow:hidden;background:
+      linear-gradient(90deg,rgba(3,18,47,.93) 0%,rgba(3,18,47,.76) 46%,rgba(3,18,47,.25) 100%),
+      url("images/gallery-09.jpg") center/cover no-repeat;}
+    .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 28%,rgba(244,207,102,.22),transparent 27%),linear-gradient(0deg,rgba(7,29,73,.35),transparent 45%)}
+    .hero-content{position:relative;z-index:2;width:min(92%,var(--max));color:#fff;padding:105px 0 90px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(244,207,102,.5);background:rgba(255,255,255,.08);padding:7px 13px;border-radius:999px;color:#ffe18b;font-weight:700;font-size:.82rem;letter-spacing:.02em}
+    .hero h1{font-family:"Playfair Display";font-size:clamp(2.65rem,6vw,5.6rem);line-height:1.03;max-width:900px;margin:22px 0 18px}
+    .hero h1 span{color:var(--gold2)}
+    .hero p{max-width:720px;font-size:1.12rem;color:#e7edf8}
+    .hero-buttons{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:13px 19px;font-weight:700;border:1px solid transparent;transition:.25s}
+    .btn-primary{background:var(--gold);color:#171717}.btn-primary:hover{transform:translateY(-2px);background:#e5b83b}
+    .btn-light{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.1);color:#fff}.btn-light:hover{background:#fff;color:var(--navy)}
+    .hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}
+    .hero-badges span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);padding:8px 12px;border-radius:10px;color:#eef4ff;font-size:.84rem}
+
+    section{padding:92px 0}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 45px}
+    .kicker{color:var(--blue2);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.74rem}
+    .section-head h2{font-family:"Playfair Display";font-size:clamp(2rem,4vw,3.2rem);color:var(--navy);line-height:1.15;margin:9px 0 12px}
+    .section-head p{color:var(--muted)}
+
+    .intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+    .image-card{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+    .image-card img{width:100%;height:520px;object-fit:cover}
+    .image-card .tag{position:absolute;left:18px;bottom:18px;background:#fff;color:var(--navy);padding:10px 14px;border-radius:12px;font-weight:800;box-shadow:0 10px 25px rgba(0,0,0,.15)}
+    .copy h3{font-family:"Playfair Display";font-size:2.2rem;line-height:1.2;color:var(--navy);margin:8px 0 17px}
+    .copy p{color:var(--muted);margin-bottom:15px}
+    .checklist{list-style:none;margin-top:22px;display:grid;gap:11px}
+    .checklist li{display:flex;gap:11px;align-items:flex-start;font-weight:600}
+    .checklist i{color:var(--blue2);margin-top:5px}
+
+    .stats{background:var(--navy);color:#fff;padding:25px 0}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .stat{text-align:center;padding:18px;border-right:1px solid rgba(255,255,255,.12)}.stat:last-child{border:0}
+    .stat strong{display:block;font-family:"Playfair Display";font-size:2rem;color:var(--gold2)}.stat span{font-size:.85rem;color:#d6dfef}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:27px;box-shadow:0 9px 30px rgba(20,33,61,.055);transition:.25s}
+    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:#edf4ff;color:var(--blue2);font-size:1.25rem;margin-bottom:17px}
+    .card h3{font-size:1.15rem;color:var(--navy);margin-bottom:8px}.card p{color:var(--muted);font-size:.94rem}
+
+    .principal{background:var(--cream)}
+    .principal-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}
+    .principal-photo{border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
+    .principal-photo img{height:560px;width:100%;object-fit:cover;object-position:center}
+    .quote{font-family:"Playfair Display";font-size:1.55rem;line-height:1.5;color:var(--navy);margin:20px 0}
+    .signature{display:flex;align-items:center;gap:13px;margin-top:22px}.signature .line{width:45px;height:2px;background:var(--gold)}.signature strong{display:block;color:var(--navy)}.signature span{font-size:.84rem;color:var(--muted)}
+    .award{margin-top:24px;display:inline-flex;align-items:center;gap:10px;background:#fff4d5;border:1px solid #f0d786;color:#765500;padding:11px 14px;border-radius:12px;font-weight:700}
+
+    .pill-row{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .pill{padding:9px 13px;border:1px solid #dce4f0;background:#fff;border-radius:999px;color:#33445f;font-weight:600;font-size:.88rem}
+
+    .gallery{background:#fff}
+    .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .gallery-item{border-radius:17px;overflow:hidden;cursor:pointer;position:relative;background:#eef2f7}
+    .gallery-item:nth-child(3),.gallery-item:nth-child(8),.gallery-item:nth-child(11){grid-row:span 2}
+    .gallery-item img{width:100%;height:230px;object-fit:cover;transition:.35s}
+    .gallery-item:nth-child(3) img,.gallery-item:nth-child(8) img,.gallery-item:nth-child(11) img{height:474px}
+    .gallery-item:after{content:"View photo";position:absolute;inset:auto 10px 10px auto;background:rgba(7,29,73,.86);color:#fff;border-radius:999px;padding:5px 9px;font-size:.7rem;opacity:0;transition:.25s}
+    .gallery-item:hover img{transform:scale(1.05)}.gallery-item:hover:after{opacity:1}
+
+    .notice-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:25px}
+    .notice-board{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff}
+    .notice{display:flex;gap:15px;padding:19px;border-bottom:1px solid var(--line)}.notice:last-child{border-bottom:0}
+    .date{width:58px;height:58px;display:grid;place-items:center;border-radius:13px;background:#eef4ff;color:var(--blue);font-weight:800;text-align:center;line-height:1.05;flex:none}.date small{font-size:.66rem;display:block}
+    .notice h4{color:var(--navy);margin-bottom:4px}.notice p{color:var(--muted);font-size:.86rem}
+    .contact-card{background:linear-gradient(145deg,var(--navy),#0e3b82);border-radius:22px;color:#fff;padding:30px;position:relative;overflow:hidden}
+    .contact-card:after{content:"";position:absolute;width:190px;height:190px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-70px;top:-65px}
+    .contact-card h3{font-family:"Playfair Display";font-size:1.8rem;margin-bottom:10px}.contact-card p{color:#cfdbef}
+    .contact-list{list-style:none;margin-top:22px;display:grid;gap:13px}.contact-list li{display:flex;gap:12px}.contact-list i{color:var(--gold2);width:20px;margin-top:4px}
+    .socials{display:flex;gap:10px;margin-top:23px}.socials a{width:42px;height:42px;border:1px solid rgba(255,255,255,.18);border-radius:12px;display:grid;place-items:center}.socials a:hover{background:#fff;color:var(--navy)}
+
+    .cta{background:linear-gradient(135deg,#0b2d69,#0c57b8);color:#fff;text-align:center;position:relative;overflow:hidden}
+    .cta:before,.cta:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.12);border-radius:50%}.cta:before{width:420px;height:420px;left:-230px;top:-250px}.cta:after{width:300px;height:300px;right:-170px;bottom:-200px}
+    .cta .container{position:relative;z-index:1}.cta h2{font-family:"Playfair Display";font-size:clamp(2rem,4vw,3.3rem);margin-bottom:10px}.cta p{color:#dce9fb;max-width:700px;margin:0 auto 25px}
+
+    footer{background:#061737;color:#b8c5db;padding:48px 0 22px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr .8fr .9fr;gap:35px}
+    footer h3{color:#fff;font-family:"Playfair Display";margin-bottom:12px}footer p{font-size:.9rem}
+    .footer-links{list-style:none;display:grid;gap:7px;font-size:.9rem}.footer-links a:hover{color:var(--gold2)}
+    .copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:32px;padding-top:18px;text-align:center;font-size:.78rem;color:#8fa0bb}
+
+    .modal{position:fixed;inset:0;background:rgba(1,7,20,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:25px}.modal.open{display:flex}
+    .modal img{max-width:min(94vw,1200px);max-height:88vh;border-radius:15px;box-shadow:0 25px 80px rgba(0,0,0,.5)}
+    .close{position:absolute;right:25px;top:20px;color:#fff;border:0;background:rgba(255,255,255,.12);width:46px;height:46px;border-radius:50%;font-size:1.3rem;cursor:pointer}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
+    @media(max-width:1000px){.navlinks{gap:14px}.gallery-grid{grid-template-columns:repeat(3,1fr)}.intro-grid,.principal-grid,.notice-wrap{grid-template-columns:1fr}.principal-photo img{height:430px}.cards{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){
+      .topbar .container{justify-content:center;text-align:center}.topbar .desktop-only{display:none}
+      .nav{min-height:72px}.menu-btn{display:block}.navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;padding:15px 5%;box-shadow:0 18px 35px rgba(7,29,73,.12);flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a{padding:8px 0}.nav-cta{text-align:center}
+      .hero{min-height:680px}.hero-content{padding:80px 0}.hero p{font-size:1rem}
+      section{padding:70px 0}.stats-grid{grid-template-columns:repeat(2,1fr)}.stat{border-right:0}.cards{grid-template-columns:1fr}.gallery-grid{grid-template-columns:repeat(2,1fr)}.gallery-item:nth-child(3),.gallery-item:nth-child(8),.gallery-item:nth-child(11){grid-row:span 1}.gallery-item img,.gallery-item:nth-child(3) img,.gallery-item:nth-child(8) img,.gallery-item:nth-child(11) img{height:230px}
+      .footer-grid{grid-template-columns:1fr}.brand-text strong{font-size:.9rem}.brand-text small{font-size:.63rem}
+    }
+    @media(max-width:450px){.gallery-grid{grid-template-columns:1fr}.hero h1{font-size:2.55rem}.hero-buttons .btn{width:100%}.stats-grid{grid-template-columns:1fr 1fr}.topbar{font-size:.76rem}}
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span><i class="fa-solid fa-location-dot"></i> Lal Sarai, Nagina, Bijnor, Uttar Pradesh</span>
+      <span class="desktop-only"><i class="fa-solid fa-phone"></i> <a href="tel:+918791493799">+91 87914 93799</a></span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand">
+        <img class="brand-mark" src="images/school-logo.png" alt="Dr. B. R. Ambedkar school logo">
+        <div class="brand-text">
+          <strong>Dr. B. R. Ambedkar Junior High School</strong>
+          <small>Lal Sarai • Nagina • Bijnor</small>
+        </div>
+      </a>
+      <button class="menu-btn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      <nav class="navlinks">
+        <a href="#about">About</a>
+        <a href="#academics">Academics</a>
+        <a href="#principal">Principal</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#notices">Notices</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content reveal show">
+        <span class="eyebrow"><i class="fa-solid fa-graduation-cap"></i> Nursery to Class 8</span>
+        <h1>Learning with <span>purpose.</span><br>Growing with confidence.</h1>
+        <p>Welcome to Dr. B. R. Ambedkar Junior High School, Lal Sarai, Nagina — a school community focused on learning, values, creativity and the all-round development of every child.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#about">Explore Our School <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="btn btn-light" href="tel:+918791493799"><i class="fa-solid fa-phone"></i> Call the School</a>
+        </div>
+        <div class="hero-badges">
+          <span><i class="fa-solid fa-language"></i> English Medium</span>
+          <span><i class="fa-solid fa-language"></i> Hindi Medium</span>
+          <span><i class="fa-solid fa-child-reaching"></i> Nursery – VIII</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="container stats-grid">
+        <div class="stat"><strong>Nursery–8</strong><span>Classes offered</span></div>
+        <div class="stat"><strong>2</strong><span>Mediums: English & Hindi</span></div>
+        <div class="stat"><strong>1</strong><span>School community</span></div>
+        <div class="stat"><strong>∞</strong><span>Possibilities for every child</span></div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container intro-grid">
+        <div class="image-card reveal">
+          <img src="images/gallery-13.jpg" alt="Students participating in a school activity">
+          <div class="tag"><i class="fa-solid fa-heart"></i> Learn • Lead • Grow</div>
+        </div>
+        <div class="copy reveal">
+          <span class="kicker">About the school</span>
+          <h3>A place where every child gets a chance to shine.</h3>
+          <p>Dr. B. R. Ambedkar Junior High School is located at Lal Sarai, Nagina, District Bijnor, Uttar Pradesh. The school provides education from Nursery through Class 8 in both English and Hindi medium.</p>
+          <p>From classroom learning to celebrations, creative activities, competitions and community events, our students are encouraged to participate, express themselves and build confidence.</p>
+          <ul class="checklist">
+            <li><i class="fa-solid fa-circle-check"></i><span>Nursery to Class 8 education</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>English and Hindi medium</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Focus on academics, values and co-curricular development</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Student participation in celebrations, awareness and cultural activities</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="academics" style="background:var(--cream)">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Academic journey</span>
+          <h2>Strong foundations for a brighter future.</h2>
+          <p>Our school serves learners from the early years through Class 8, with learning experiences designed to support knowledge, confidence, discipline and creativity.</p>
+        </div>
+        <div class="cards">
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-shapes"></i></div><h3>Early Years</h3><p>Nursery and foundational learners are encouraged to learn through activity, creativity, interaction and joyful classroom experiences.</p></article>
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-book-open-reader"></i></div><h3>Primary Learning</h3><p>Students build strong academic habits while developing communication, curiosity, discipline and confidence.</p></article>
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-compass-drafting"></i></div><h3>Middle School</h3><p>Classes through VIII encourage deeper understanding, independent thinking, responsibility and preparation for the next stage of education.</p></article>
+        </div>
+        <div class="pill-row reveal">
+          <span class="pill">English Medium</span><span class="pill">Hindi Medium</span><span class="pill">Nursery</span><span class="pill">Primary</span><span class="pill">Junior High School</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="principal" class="principal">
+      <div class="container principal-grid">
+        <div class="principal-photo reveal">
+          <img src="images/principal-shashi-singh.jpg" alt="Dr. Shashi Singh, Principal of Dr. B. R. Ambedkar Junior High School" loading="lazy">
+        </div>
+        <div class="copy reveal">
+          <span class="kicker">Principal's leadership</span>
+          <h3>Dr. Shashi Singh</h3>
+          <p class="quote">“Education becomes meaningful when children are given knowledge, confidence, values and the courage to express their potential.”</p>
+          <p>Under the leadership of <strong>Dr. Shashi Singh</strong>, the school community aims to create an encouraging environment where students can learn, participate and grow as responsible young citizens.</p>
+          <div class="award"><i class="fa-solid fa-award"></i> Honoured with the <strong>Inspiration Award</strong> by Story Times</div>
+          <div class="signature"><div class="line"></div><div><strong>Dr. Shashi Singh</strong><span>Principal</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">What we value</span>
+          <h2>More than academics.</h2>
+          <p>We believe a strong school experience develops the whole child — knowledge, character, creativity and confidence.</p>
+        </div>
+        <div class="cards">
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-lightbulb"></i></div><h3>Curiosity</h3><p>Encouraging children to ask questions, explore ideas and develop a lifelong love of learning.</p></article>
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-people-group"></i></div><h3>Participation</h3><p>Celebrations, competitions, cultural activities and awareness programmes help students discover their strengths.</p></article>
+          <article class="card reveal"><div class="icon"><i class="fa-solid fa-shield-heart"></i></div><h3>Values</h3><p>Respect, responsibility, discipline and confidence are woven into the everyday school experience.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">School life</span>
+          <h2>Moments from our school community.</h2>
+          <p>A glimpse of celebrations, student achievements, cultural activities, awareness programmes and classroom life.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item reveal"><img src="images/gallery-01.jpg" alt="Student celebrating an achievement"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-02.jpg" alt="Student holding an achievement frame"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-03.jpg" alt="Young student receiving recognition"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-05.jpg" alt="Students at a school celebration"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-06.jpg" alt="Students receiving awards"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-07.jpg" alt="Student with trophy and certificate"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-08.jpg" alt="Students participating in a school programme"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-09.jpg" alt="Students in a school activity"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-10.jpg" alt="Students in a classroom programme"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-11.jpg" alt="School cultural activity"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-12.jpg" alt="Students participating in a community event"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-13.jpg" alt="Students during an awareness programme"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-14.jpg" alt="Students and teachers during a school event"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-15.jpg" alt="Students receiving certificates and trophies"></div>
+          <div class="gallery-item reveal"><img src="images/gallery-04.jpg" alt="School celebration photograph"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="notices" style="background:var(--cream)">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">School updates</span>
+          <h2>Notice board</h2>
+          <p>This section is ready for the school to publish announcements, holidays, admissions updates, examinations and event notices.</p>
+        </div>
+        <div class="notice-wrap">
+          <div class="notice-board reveal">
+            <div class="notice"><div class="date">INFO<small>UPDATE</small></div><div><h4>Admissions & Enquiries</h4><p>For admission-related information, please contact the school directly.</p></div></div>
+            <div class="notice"><div class="date">INFO<small>EVENT</small></div><div><h4>School Activities</h4><p>Photos and highlights from school programmes can be featured in the gallery above.</p></div></div>
+            <div class="notice"><div class="date">INFO<small>NEWS</small></div><div><h4>Latest Notices</h4><p>Replace this card with the school's latest official announcement whenever needed.</p></div></div>
+          </div>
+          <aside class="contact-card reveal" id="contact">
+            <h3>Get in touch</h3>
+            <p>For admissions, school information or general enquiries, contact the school.</p>
+            <ul class="contact-list">
+              <li><i class="fa-solid fa-phone"></i><a href="tel:+918791493799">+91 87914 93799</a></li>
+              <li><i class="fa-solid fa-location-dot"></i><span>Lal Sarai, Nagina, District Bijnor, Uttar Pradesh</span></li>
+              <li><i class="fa-solid fa-school"></i><span>Nursery to Class 8 • English & Hindi Medium</span></li>
+            </ul>
+            <div class="socials">
+              <a href="https://www.instagram.com/dr.b.r.85/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.facebook.com/search/pages/?q=Dr%20B%20R%20Ambedkar%20Junior%20High%20School%20Nagina" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="tel:+918791493799" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Build the future, one child at a time.</h2>
+        <p>Discover the learning community at Dr. B. R. Ambedkar Junior High School, Lal Sarai, Nagina.</p>
+        <a class="btn btn-primary" href="tel:+918791493799"><i class="fa-solid fa-phone"></i> Contact the School</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>Dr. B. R. Ambedkar Junior High School</h3>
+        <p>Lal Sarai, Nagina, District Bijnor, Uttar Pradesh.</p>
+        <p style="margin-top:8px">Nursery to Class 8 • English & Hindi Medium</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li><li><a href="#academics">Academics</a></li><li><a href="#principal">Principal</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul class="footer-links">
+          <li><a href="tel:+918791493799">+91 87914 93799</a></li>
+          <li><a href="https://www.instagram.com/dr.b.r.85/" target="_blank" rel="noopener">Instagram: dr.b.r.85</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Lal+Sarai+Nagina+Bijnor+Uttar+Pradesh" target="_blank" rel="noopener">Open location in Maps</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> Dr. B. R. Ambedkar Junior High School, Lal Sarai, Nagina. All rights reserved.</div>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <button class="close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <img id="modalImg" src="" alt="School gallery photo">
+  </div>
+
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const nav = document.querySelector('.navlinks');
+    menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
+    document.querySelectorAll('.navlinks a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+      });
+    });
+    document.querySelector('.close').addEventListener('click', () => {
+      modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+    });
+    modal.addEventListener('click', e => { if(e.target === modal) modal.classList.remove('open'); });
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') modal.classList.remove('open'); });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('show'); });
+    }, {threshold:.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
